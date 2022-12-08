@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Pose Estimation
-author: [Richard Kuo]
+title: Capstone Project
+author: [Hsuan-Yu Yeh]
 category: [Lecture]
 tags: [jekyll, ai]
 ---
 
-Pose Estimation includes Applications, Body Pose, Head Pose, Hand Pose , Object Pose.
+期末專題實作
 
 ---
 ### Pose Estimation Applications
