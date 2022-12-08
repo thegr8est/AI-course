@@ -19,11 +19,13 @@ tags: [jekyll, ai]
 
 ---
 ### 系統方塊圖
+系統流程圖<br>
 
-
+AI模型說明<br>
+![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/AirDigit_App.png?raw=true)
 ---
 ### 製作步驟
-![]
+
 
 1.建立資料集dataset
 2.移植程式to Kaggle
