@@ -23,6 +23,7 @@ tags: [jekyll, ai]
 
 ---
 ### 製作步驟
+![]
 
 1.建立資料集dataset
 2.移植程式to Kaggle
