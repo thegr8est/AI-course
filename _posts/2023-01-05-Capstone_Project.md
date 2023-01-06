@@ -52,7 +52,58 @@ agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要�
 
 ---
 ### 程式碼
-https://www.kaggle.com/code/thegr8est/stock-dqn
+https://www.kaggle.com/code/thegr8est/stock-dqn <br>
+* **創建Agent**
+```
+class DQNAgent:
+    def __init__(self, state_size, is_eval=False, model_name=""):
+        self.state_size = state_size # normalized previous days
+        self.action_size = 3 # sit, buy, sell
+        self.memory = deque(maxlen=1000)
+        self.inventory = []
+        self.model_name = model_name
+        self.is_eval = is_eval
+        self.gamma = 0.95
+        self.epsilon = 1.0
+        self.epsilon_min = 0.01
+        self.epsilon_decay = 0.995
+        self.model = load_model(model_name) if is_eval else self._model()
+ ```
+ 初始化一些基本的agent常數，確保整個股票買賣過程並保持參數穩定<br>
+ 
+ ---
+ * **定義基本函式**
+ ```
+ def formatPrice(n):
+    return("-Rs." if n<0 else "Rs.")+"{0:.2f}".format(abs(n))
+
+def getStockDataVec(symbol):
+    vec = []
+    dat = []
+    lines = open('/kaggle/input/stocks/'+symbol+".csv","r").read().splitlines()
+    for line in lines[1:]:
+        vec.append(float(line.split(",")[4]))
+        dat.append(line.split(",")[0])
+    return vec, dat
+
+def sigmoid(x):
+    return 1/(1+math.exp(-x))
+
+def getState(data, t, n):
+    d = t - n + 1
+    block = data[d:t + 1] if d >= 0 else -d * [data[0]] + data[0:t + 1] # pad with t0
+    res = []
+    for i in range(n - 1):
+        res.append(sigmoid(block[i + 1] - block[i]))
+    return np.array([res])
+```
+formatPrice()定義貨幣的格式<br>
+getStockDataVec()將股票的資料轉乘python<br>
+sigmoid()用於數學計算<br>
+getState()用來表示資料現在的狀態
+
+---
+
 
 <br>
 <br>
