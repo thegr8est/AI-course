@@ -9,9 +9,11 @@ category: [期末專題]
 
 
 ### Reinforcement Learning(強化學習)
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/RL.PNG?raw=true)<br>
 
 這是強化學習的概念圖，而其中腦袋表示agent，地球表示environment，reward表示agent做出一個action後environment所提供的回饋<br>
+
 agent會根據現在的做出一個相對應的action，則這一連串的action稱為policy<br>
 reward的值是由操作者定義的，且reward在強化學習中扮演很重要的一環<br>
 
@@ -20,8 +22,10 @@ reward的值是由操作者定義的，且reward在強化學習中扮演很重�
 
 
 ### Deep Q-Learning(DQN)
+
 DQN 是由兩個龐大體系所組成的，第一個是強化式學習，另一個就是深度學習<br>
 而DQN想要達成的目標就是訓練一種policy，而這個policy可以讓discounted cumulative reward最大化<br>
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/cumulative.PNG?raw=true)<br>
 
 其中γ是一個介於0到1的常數，因為越早的action對越晚的reward的影響也會最小<br>
@@ -29,10 +33,12 @@ DQN 是由兩個龐大體系所組成的，第一個是強化式學習，另一�
 
 
 * **Exploration**<br>
+
 agent所採取的action必須是有隨機性的，隨機性大一點則蒐集到的資料也會比較豐富<br>
 
 
 * **Value Function**<br>
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/value.PNG?raw=true)<br>
 
 Value Function的工作就是要去估測某一個agent在某一個時間點他接下來的discounted cumulative reward會是多少<br>
@@ -42,18 +48,21 @@ Value Function的工作就是要去估測某一個agent在某一個時間點他�
 
 
 * Monte Carlo<br>
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/monte.PNG?raw=true)<br>
 
 agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要和G'a越接近越好<br>
 
 
 * Temporal Difference<br>
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/temporal.PNG?raw=true)<br>
 
 在St環境下產生的Value Function減掉在S(t+1)的環境下產生的Value Funciton乘上γ要和rt越接近越好<br>
 
 
 * **Action-Value function**<br>
+
 在得出了Value Function後，接下來我們再把action給考慮進來，計算每個action對應reward所獲得的價值，就可以定義出Action-Value function<br>
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/actionvalue.PNG?raw=true)<br>
 
@@ -61,6 +70,7 @@ agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要�
 
 
 * **Optimal value function**<br>
+
 強化學習最重要的點在於找到一個最好的Policy，所以最好的動作價值函數就是在所有策略下的動作價值函數的最大值
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/optimal.PNG?raw=true)<br>
 
@@ -70,6 +80,7 @@ agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要�
 ### DQN的特色Experience replay
 
 對於網路輸入，DQN 算法是把整個遊戲的像素作為神經網路的輸入<br>
+
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/experience.PNG?raw=true)<br>
 
 用一塊內存空間D，用來儲存每次探索獲得數據![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/text.PNG?raw=true)<br>
@@ -78,10 +89,12 @@ agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要�
 
 ---
 ### 程式碼
+
 https://www.kaggle.com/code/thegr8est/stock-dqn <br>
 
 
 * **創建Agent**
+
 ```
 class DQNAgent:
     def __init__(self, state_size, is_eval=False, model_name=""):
@@ -102,6 +115,7 @@ class DQNAgent:
  
  ---
  * **定義基本函式**
+ 
  ```
  def formatPrice(n):
     return("-Rs." if n<0 else "Rs.")+"{0:.2f}".format(abs(n))
@@ -134,6 +148,7 @@ getState()用來表示資料現在的狀態
 
 ---
 * **訓練Agent**
+
 ```
 for e in range(num_episode):
     print("Episode " + str(e+1) + "/" + str(num_episode))
