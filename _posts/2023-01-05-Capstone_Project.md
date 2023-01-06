@@ -90,7 +90,7 @@ agent在Sa的環境下所產生的cumlative reward為G'a，而Value Function要�
 ---
 ### 程式碼
 
-https://www.kaggle.com/code/thegr8est/stock-dqn <br>
+[https://www.kaggle.com/code/thegr8est/stock-dqn](https://www.kaggle.com/code/thegr8est/stock-dqn) <br>
 
 
 * **創建Agent**
