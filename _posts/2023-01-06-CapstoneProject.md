@@ -104,7 +104,6 @@ tags: [jekyll, ai]
 [5]	Weisstein, Eric W, "Rotation Matrix," From MathWorld--A Wolfram Web Resource,
 [https://mathworld.wolfram.com/RotationMatrix.html](http://mathworld.wolfram.com/RotationMatrix.html)<br>
 
-
 <br>
 <br>
 
