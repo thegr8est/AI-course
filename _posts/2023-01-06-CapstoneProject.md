@@ -8,6 +8,10 @@ tags: [jekyll, ai]
 
 ## 期末專題 -- 人體3D建模結合OpenPose的脊椎側彎檢測
 
+### 系統流程圖
+![image](https://user-images.githubusercontent.com/71216874/212288380-56bc0eee-b3f8-4be6-834e-cf4cb822182e.png)
+
+---
 ### 實驗步驟圖
 ![](https://github.com/thegr8est/AI-course/blob/gh-pages/images/%E5%9C%96%E7%89%871.jpg?raw=true)<br>
 
@@ -60,12 +64,31 @@ tags: [jekyll, ai]
 
 ---
 ### 四、骨架製作
-將上述結果存為影像，並利用OpenPose製作一張以該影像為基底含有骨架的照片。<br>
+* **將上述結果存為影像，並利用OpenPose製作一張以該影像為基底含有骨架的照片。**<br>
 ![image](https://user-images.githubusercontent.com/71216874/212284531-bf1d0d5f-0dda-4e96-a2e3-afc1b02d367d.png)<br>
 
 ---
 ### 五、介面操作
-製作一個使用者介面，讓受試者可以觀察到骨架的示意圖以及脊椎側彎的檢測結果。<br>
+* **製作一個使用者介面，讓受試者可以觀察到骨架的示意圖以及脊椎側彎的檢測結果。**<br>
+![image](https://user-images.githubusercontent.com/71216874/212285940-fbe09685-26f4-4029-a3b4-b370850ed3ed.png)<br>
+* **利用正切函數與斜率的公式可以將脊椎和肩膀之間的角度算出，藉此判斷受試者是否有脊椎側彎**<br>
+![image](https://user-images.githubusercontent.com/71216874/212286113-75823712-c420-4e70-a9a5-55ae6d12783d.png)<br>
+* **原始圖片示意圖**<br>
+![image](https://user-images.githubusercontent.com/71216874/212287370-b465b846-cb22-49c9-9c59-1d1c617afa9a.png)<br>
+* **脊椎骨架示意圖**<br>
+![image](https://user-images.githubusercontent.com/71216874/212287553-fd0f1e25-56fe-4cee-a43b-8aea1f2745bb.png)<br>
+* **檢測結果示意圖**<br>
+![image](https://user-images.githubusercontent.com/71216874/212286170-1adc17cd-7a0c-4ec8-877f-71b9d2244b72.png)<br>
+
+---
+### 參考文獻<br>
+[1]	Mur-Artal, Raul, Jose Maria Martinez Montiel, and Juan D. Tardos, "ORB-SLAM: a versatile and accurate monocular SLAM system," IEEE transactions on robotics 31.5, 2015, pp.1147-1163.<br>
+[2]	Lempitsky, Victor S., et al, "Image segmentation with a bounding box prior," ICCV,Vol.76, 2009.<br>
+[3]	George Seif, Density-Based Spatial Clustering of Applications with Noise (DBSCAN) From towardsdatascience, https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef6.<br>
+[4]	Fischler, Martin A., and Robert C. Bolles, "Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography," Communications of the ACM 24.6 , 1981, pp. 381-395.<br>
+[5]	Weisstein, Eric W, "Rotation Matrix," From MathWorld--A Wolfram Web Resource, http://mathworld.wolfram.com/RotationMatrix.html.<br>
+
+
 
 
 
