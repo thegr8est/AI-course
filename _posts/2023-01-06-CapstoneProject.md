@@ -98,9 +98,11 @@ tags: [jekyll, ai]
 ### 參考文獻<br>
 [1]	Mur-Artal, Raul, Jose Maria Martinez Montiel, and Juan D. Tardos, "ORB-SLAM: a versatile and accurate monocular SLAM system," IEEE transactions on robotics 31.5, 2015, pp.1147-1163.<br>
 [2]	Lempitsky, Victor S., et al, "Image segmentation with a bounding box prior," ICCV,Vol.76, 2009.<br>
-[3]	George Seif, Density-Based Spatial Clustering of Applications with Noise (DBSCAN) From towardsdatascience, [https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef6](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef6).<br>
+[3]	George Seif, Density-Based Spatial Clustering of Applications with Noise (DBSCAN) From towardsdatascience,
+[https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef6](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef6)<br>
 [4]	Fischler, Martin A., and Robert C. Bolles, "Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography," Communications of the ACM 24.6 , 1981, pp. 381-395.<br>
-[5]	Weisstein, Eric W, "Rotation Matrix," From MathWorld--A Wolfram Web Resource,[https://mathworld.wolfram.com/RotationMatrix.html](http://mathworld.wolfram.com/RotationMatrix.html).<br>
+[5]	Weisstein, Eric W, "Rotation Matrix," From MathWorld--A Wolfram Web Resource,
+[https://mathworld.wolfram.com/RotationMatrix.html](http://mathworld.wolfram.com/RotationMatrix.html)<br>
 
 
 <br>
